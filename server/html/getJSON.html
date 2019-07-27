@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+   <head>
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script>
+         $(document).ready(function(){
+            $('#getMethod').click(function() {
+               var jsonLocation = '../data/313-4F.json';
+               $.getJSON(jsonLocation, function(data){
+                  // $.each(data, function(I, item){
+                  console.log(data);
+               });
+            });
+         });
+      </script> 
+   </head>
+ 
+   <body>
+      <h1>Ajax 기본 테스트</h1>
+      <div style="border: 3px solid gray; width: 180px;">
+         <h2>GET</h2>
+         <button id='getMethod'>GET</button>
+         <p id ='get_output'>get</p>
+      </div>
+
+   </body>
+</html>
